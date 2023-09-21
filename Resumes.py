@@ -2,7 +2,7 @@ import os
 import re
 
 try:
-    with open("mboc-short.txt","rb") as infile:
+    with open("mbox-short.txt","rb") as infile:
 
         data = infile.read()
         pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
