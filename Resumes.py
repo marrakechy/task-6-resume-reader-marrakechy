@@ -1,11 +1,12 @@
-
 import os
-import PyPDF2
+import re
 
 try:
-    with open("Resumes/app-0009.pdf","rb") as infile:
+    with open("mboc-short.txt","rb") as infile:
 
-        pdfReader = PyPDF2.PdfReader(infile)
+        data = infile.read()
+        pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+
         for p in pdfReader.pages:
             print(p.extract_text())
 
